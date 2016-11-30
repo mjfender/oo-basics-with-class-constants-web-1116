@@ -2,8 +2,24 @@ class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
+  BRANDS = []
+
   def initialize(brand)
     @brand = brand
+    if BRANDS.include?(brand)
+      puts "Brand exists"
+    else
+      BRANDS.push(brand)
+    end
+  end
+
+  def brand=(brand)
+    @genre = brand
+    if BRANDS.include?(brand)
+      puts "Brand exists"
+    else
+      BRANDS.push(brand)
+    end
   end
 
   def cobble
